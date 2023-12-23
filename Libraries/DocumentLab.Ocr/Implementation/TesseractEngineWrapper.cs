@@ -23,7 +23,7 @@
       Engine = new TesseractEngine(
         Path.Combine(languageFilePath ?? AppDomain.CurrentDomain.RelativeSearchPath ?? AppDomain.CurrentDomain.BaseDirectory, language ?? Constants.LanguageFilePath),
         Constants.DefaultLanguage,
-        EngineMode.Default);
+        EngineMode.TesseractAndLstm);
     }
 
     public IEnumerable<OcrResult> ProcessOcrResult(BitmapWithOcrMetaInfo image)
@@ -50,7 +50,7 @@
           });
       }
 
-      Thread.CurrentThread.Priority = ThreadPriority.Normal;
+          Thread.CurrentThread.Priority = ThreadPriority.Normal;
 
       engineLock.Release();
       NumberOfAwaiters -= 1;

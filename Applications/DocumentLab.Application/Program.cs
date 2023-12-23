@@ -15,10 +15,8 @@
        // return;
       }
 
-      var pictureFilePath = "c:\\temp\\test.tiff";
-      var scriptFilePath =  "c:\\temp\\horse.txt";
-       //     var pictureFilePath = args[0] ?? "c:\\temp\\bild.png";
-       //     var scriptFilePath = args[1] ?? "c:\\temp\\bild.txt";
+            var pictureFilePath = args[0]==null ? args[0] : "c:\\temp\\bild.png";
+            var scriptFilePath = args[1]==null ? args[1] : "c:\\temp\\bild.txt";
             var outputFilePath = string.Empty;
       if (args.Length == 3)
       {
