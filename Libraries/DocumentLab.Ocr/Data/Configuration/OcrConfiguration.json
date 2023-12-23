@@ -1,5 +1,5 @@
 ﻿{
     "NumberOfThreads": 64,
     "TesseractEnginePoolSize": 32,
-    "ResultChunkSize": 8
+    "ResultChunkSize": 16
 }

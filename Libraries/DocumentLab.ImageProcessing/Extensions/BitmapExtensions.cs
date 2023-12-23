@@ -8,6 +8,10 @@
   using System.IO;
   using System.Linq;
 
+
+
+
+
   public static class BitmapExtensions
   {
     public static Image<Bgr, byte> ToCvImage(this Bitmap bitmap)

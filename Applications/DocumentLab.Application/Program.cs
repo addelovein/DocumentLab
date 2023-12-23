@@ -12,12 +12,14 @@
       if (args == null || args.Length < 2)
       {
         Console.WriteLine($"First argument needs to be a path to a picture, second argument needs to be a path to a text file containing queries. Third argument is optional, but specifies a file path to output the results to.");
-        return;
+       // return;
       }
 
-      var pictureFilePath = args[0];
-      var scriptFilePath = args[1];
-      var outputFilePath = string.Empty;
+      var pictureFilePath = "c:\\temp\\test.tiff";
+      var scriptFilePath =  "c:\\temp\\horse.txt";
+       //     var pictureFilePath = args[0] ?? "c:\\temp\\bild.png";
+       //     var scriptFilePath = args[1] ?? "c:\\temp\\bild.txt";
+            var outputFilePath = string.Empty;
       if (args.Length == 3)
       {
         outputFilePath = args[2];
