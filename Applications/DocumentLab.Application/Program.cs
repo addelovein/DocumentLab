@@ -12,7 +12,7 @@
       if (args == null || args.Length < 2)
       {
         Console.WriteLine($"First argument needs to be a path to a picture, second argument needs to be a path to a text file containing queries. Third argument is optional, but specifies a file path to output the results to.");
-       // return;
+        return;
       }
 
             var pictureFilePath = args[0]==null ? args[0] : "c:\\temp\\bild.png";

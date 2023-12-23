@@ -10,8 +10,9 @@
   using System.Drawing;
   using System.Collections.Generic;
   using System.Drawing.Imaging;
+    using System.Linq;
 
-  public class ImageProcessor : IImageProcessor
+    public class ImageProcessor : IImageProcessor
   {
     private readonly IStrategyFactoryBuilder strategyFactoryBuilder;
 
@@ -42,7 +43,8 @@
 
     public TrimInformation GetTrimmedBoundingBox(IEnumerable<byte> image, Rectangle boundingBox)
     {
-      using (var processedImage = new MagickImage(image.ToBitmap()))
+      var m = new MagickFactory();
+      using (var processedImage = new MagickImage(m.Image.Create(image.ToArray())))
       {
         processedImage.ColorSpace = ColorSpace.Gray;
         processedImage.ColorType = ColorType.Grayscale;
